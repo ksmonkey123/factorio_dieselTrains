@@ -21,7 +21,7 @@ if fluid then
 		icon_size = fluid.icon_size,
 		icon_mipmaps = fluid.icon_mipmaps,
 		icons = fluid.icons,
-		stack_size = 1500,
+		stack_size = 4294967295,
 		fuel_category = "Diesel-Locomotive-fluid",
 		flags = {"hidden"},
 		name = "Diesel-Locomotive-diesel-fuel",
