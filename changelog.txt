@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2020/04/26
+  Changes:
+    - migrated old diesel locomotives mod over to use the fluidTrains mod for fluid handling
+    - locomotives now no longer accept any fluids but only light and heavy oil (no diesel anymore, will be added if requested)
+    - removed settings to choose the accepted fluid. currently both light and heavy oil are supported (and no diesel)
+    - diesel locomotives can now also be fueled by oil barrels (only if no other mod defines a fuel_category for the oil barrels)
+    - no longer modifies the graphics of the vanilla trains and uses the vanilla graphics itself
+  Bugfixes:
+    - fixed issue preventing tanks from spawning when multiple pumps with different fluid types are present
