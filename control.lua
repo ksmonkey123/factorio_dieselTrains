@@ -5,6 +5,9 @@ local function ON_INIT()
 	if game.fluid_prototypes["diesel-fuel"] then
 		remote.call("fluidTrains_hook", "addFluid", "Diesel-Locomotive-fluid", "diesel-fuel", {{item = "Diesel-Locomotive-diesel-fuel", temp = 0}})
 	end
+	if game.fluid_prototypes["diesel"] then
+		remote.call("fluidTrains_hook", "addFluid", "Diesel-Locomotive-fluid", "diesel", {{item = "Diesel-Locomotive-diesel", temp = 0}})
+	end
 	
 	for _, force in pairs(game.forces) do
 	  if force.technologies["diesel-locomotive"].researched then
