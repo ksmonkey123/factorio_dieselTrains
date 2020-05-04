@@ -21,8 +21,7 @@ local light_proxy = {
 	localised_name = {"", {"fluid-name.light-oil"}},
 	fuel_value = "1.35MJ",
 	fuel_acceleration_multiplier = 1.2,
-	fuel_top_speed_multiplier = 1.1,
-	group = "fluidTrains_fake"
+	fuel_top_speed_multiplier = 1.1
 }
 
 fluid = data.raw["fluid"]["heavy-oil"]
@@ -40,8 +39,7 @@ local heavy_proxy = {
 	localised_name = {"", {"fluid-name.heavy-oil"}},
 	fuel_value = "0.65MJ",
 	fuel_acceleration_multiplier = 1.1,
-	fuel_top_speed_multiplier = 1.05,
-	group = "fluidTrains_fake"
+	fuel_top_speed_multiplier = 1.05
 }
 
 
