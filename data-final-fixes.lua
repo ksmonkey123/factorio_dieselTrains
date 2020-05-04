@@ -1,3 +1,7 @@
+local tankApi = require "__fluidTrains__/api/data"
+
+tankApi.generateTank(1500)
+
 local function patchBarrel(barrel, energy)
 	if barrel then
 		if not barrel.fuel_category then
@@ -28,8 +32,7 @@ if fluid then
 		localised_name = {"", {"fluid-name.diesel-fuel"}},
 		fuel_value = "1.4MJ",
 		fuel_acceleration_multiplier = 1.2,
-		fuel_top_speed_multiplier = 1.1,
-		group = "fluidTrains_fake"
+		fuel_top_speed_multiplier = 1.1
 	}
 	data:extend({light_proxy})
 end
@@ -49,8 +52,7 @@ if fluid then
 		localised_name = {"", {"fluid-name.diesel"}},
 		fuel_value = "1.4MJ",
 		fuel_acceleration_multiplier = 1.2,
-		fuel_top_speed_multiplier = 1.1,
-		group = "fluidTrains_fake"
+		fuel_top_speed_multiplier = 1.1
 	}
 	data:extend({light_proxy})
 end
