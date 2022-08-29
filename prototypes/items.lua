@@ -19,9 +19,9 @@ local light_proxy = {
 	flags = {"hidden"},
 	name = "Diesel-Locomotive-light-oil",
 	localised_name = {"", {"fluid-name.light-oil"}},
-	fuel_value = "1.35MJ",
-	fuel_acceleration_multiplier = 1.2,
-	fuel_top_speed_multiplier = 1.1
+	fuel_value = settings.startup["dieselTrains_light_oil_fuel_mj"].value .. "MJ",
+	fuel_acceleration_multiplier = settings.startup["dieselTrains_light_oil_accel_mult"].value,
+	fuel_top_speed_multiplier = settings.startup["dieselTrains_light_oil_topspeed_mult"].value
 }
 
 fluid = data.raw["fluid"]["heavy-oil"]
@@ -37,9 +37,9 @@ local heavy_proxy = {
 	flags = {"hidden"},
 	name = "Diesel-Locomotive-heavy-oil",
 	localised_name = {"", {"fluid-name.heavy-oil"}},
-	fuel_value = "0.65MJ",
-	fuel_acceleration_multiplier = 1.1,
-	fuel_top_speed_multiplier = 1.05
+	fuel_value = settings.startup["dieselTrains_heavy_oil_fuel_mj"].value .. "MJ",
+	fuel_acceleration_multiplier = settings.startup["dieselTrains_heavy_oil_accel_mult"].value,
+	fuel_top_speed_multiplier = settings.startup["dieselTrains_heavy_oil_topspeed_mult"].value
 }
 
 

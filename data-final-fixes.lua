@@ -12,13 +12,13 @@ local function patchBarrel(barrel, energy)
 	end
 end
 
-patchBarrel(data.raw["item"]["light-oil-barrel"], "67.5MJ")
-patchBarrel(data.raw["item"]["heavy-oil-barrel"], "32.5MJ")
-patchBarrel(data.raw["item"]["diesel-barrel"], "70MJ")
-patchBarrel(data.raw["item"]["diesel-fuel-barrel"], "70MJ")
+patchBarrel(data.raw["item"]["light-oil-barrel"], (50 * settings.startup["dieselTrains_light_oil_fuel_mj"].value) .. "MJ")
+patchBarrel(data.raw["item"]["heavy-oil-barrel"], (50 * settings.startup["dieselTrains_heavy_oil_fuel_mj"].value) .. "MJ")
+patchBarrel(data.raw["item"]["diesel-barrel"], (50 * settings.startup["dieselTrains_diesel_fuel_mj"].value) .. "MJ")
+patchBarrel(data.raw["item"]["diesel-fuel-barrel"], (50 * settings.startup["dieselTrains_diesel_fuel_mj"].value) .. "MJ")
 
 local fluid = data.raw["fluid"]["diesel-fuel"]
-if fluid then 
+if fluid then
 	local light_proxy = {
 		type = "item",
 		icon = fluid.icon,
@@ -30,15 +30,15 @@ if fluid then
 		flags = {"hidden"},
 		name = "Diesel-Locomotive-diesel-fuel",
 		localised_name = {"", {"fluid-name.diesel-fuel"}},
-		fuel_value = "1.4MJ",
-		fuel_acceleration_multiplier = 1.2,
-		fuel_top_speed_multiplier = 1.1
+		fuel_value = settings.startup["dieselTrains_diesel_fuel_mj"].value .. "MJ",
+		fuel_acceleration_multiplier = settings.startup["dieselTrains_diesel_accel_mult"].value,
+		fuel_top_speed_multiplier = settings.startup["dieselTrains_diesel_topspeed_mult"].value
 	}
 	data:extend({light_proxy})
 end
 
 fluid = data.raw["fluid"]["diesel"]
-if fluid then 
+if fluid then
 	local light_proxy = {
 		type = "item",
 		icon = fluid.icon,
@@ -50,9 +50,9 @@ if fluid then
 		flags = {"hidden"},
 		name = "Diesel-Locomotive-diesel",
 		localised_name = {"", {"fluid-name.diesel"}},
-		fuel_value = "1.4MJ",
-		fuel_acceleration_multiplier = 1.2,
-		fuel_top_speed_multiplier = 1.1
+		fuel_value = settings.startup["dieselTrains_diesel_fuel_mj"].value .. "MJ",
+		fuel_acceleration_multiplier = settings.startup["dieselTrains_diesel_accel_mult"].value,
+		fuel_top_speed_multiplier = settings.startup["dieselTrains_diesel_topspeed_mult"].value
 	}
 	data:extend({light_proxy})
 end
