@@ -7,5 +7,5 @@
 	"homepage": "",
 	"description": "Adds a locomotive for using light oil or heavy oil as fuel.",
 	"factorio_version": "1.1",
-	"dependencies": [ "base >= 1.1.5", "fluidTrains >= 1.0.0" ]
+	"dependencies": [ "base >= 1.1.5", "fluidTrains >= 1.0.0", "? trainConstructionSite >= 0.2.19" ]
 }
