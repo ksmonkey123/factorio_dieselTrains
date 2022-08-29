@@ -1,11 +1,11 @@
 {
 	"name": "dieselTrains",
-	"version": "0.18.4",
+	"version": "1.1.0",
 	"title": "Diesel Trains",
 	"author": "ksmonkey123",
 	"contact": "",
 	"homepage": "",
 	"description": "Adds a locomotive for using light oil or heavy oil as fuel.",
-	"factorio_version": "0.18",
-	"dependencies": [ "base >= 0.18.22", "fluidTrains >= 0.18.5" ]
+	"factorio_version": "1.1",
+	"dependencies": [ "base >= 1.1.5", "fluidTrains >= 1.0.0", "? trainConstructionSite >= 0.2.19" ]
 }
